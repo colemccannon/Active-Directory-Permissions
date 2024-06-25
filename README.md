@@ -1,13 +1,13 @@
 # Active-Directory-Permissions
-![Active Directory](https://github.com/Coleyboii/Active-Directory-Lab/blob/main/Screenshot%202024-05-18%20165031.png)
+![Active Directory](https://github.com/colemccannon/Active-Directory-Permissions/blob/main/Screenshot%202024-06-25%20141441.png)
 
 ## Outline
 
-In this project, I downloaded a Windows 10 ISO and a Server ISO, and put them into Virtualbox. 
-I used the server as a domain controller to house active directory with two network adapters.
-One was connected to the outside internet, and one to the Virtualbox internal network. 
-I assigned IP addressing for the internal network, then set up Active Directory, NAT, routing and DHCP.
-I then ran a Powershell script that created 1,000 users in Active Directory.
-Then, I joined the other virtual machine to the domain and named it Client1 and logged in with a user account.
+In this project, I practiced both share and NTFS permissions in Active Directory.
+Using the Domain Controller and the Client from my first Active Directory lab, I created two test users, two groups and two folders.
+One group was for "employees" which contained both users, and one group was called "BAD" which contained one of the two users.
+This can emulate an employee who is under investigation, and should not have permission to private resources.
+I created a "public" and "private" folder within the share, and gave the employees access to the share, but used NTFS permissions to deny the "BAD" group access to "private".
+I then logged in with both test users on my Windows computer to see how the permissions blocked the "BAD" user from seeing the private folder.
 
-This was a nice lab to set up a basic corporate network, and I will repeat it many times to make this skill second-nature.
+I will continue playing with these virtual machines to familiarize myself with Active Directory.
